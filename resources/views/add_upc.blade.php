@@ -16,7 +16,7 @@
  
 
 <div class="px-3  py-2">
-<div class="px-10 py-4  text-3xl inline"  > <i class="nav-icon fas fa-upload text-3xl" ></i> Add UPC </div>
+<div class="px-10 py-4  text-3xl inline"  > <i class="nav-icon fas fa-upload text-3xl" ></i> Single Upload </div>
 </div>
 
 <div class="px-3  py-2">

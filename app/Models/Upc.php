@@ -32,7 +32,9 @@ protected $fillable = [
    'description' ,
     'size' ,
     'uom' ,               
-     
+    
+    'benefit_qt',
+
     'verify'  ,
     'add_date'  ,
     'edit_date'  ,

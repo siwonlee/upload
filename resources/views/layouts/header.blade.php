@@ -134,7 +134,7 @@ font-size: 13px;
     <a href="{{route('dashboard')}}" class="brand-link">
     <img src="{{asset('storage/MD_logo.png')}}" alt=" " class="brand-image   elevation-3"
            style="opacity: .8">
-      <span class="brand-text font-weight-light">APL Management</span>
+      <span class="brand-text font-weight-light">UPC Upload</span>
     </a>
 
     <!-- Sidebar -->
@@ -165,114 +165,64 @@ font-size: 13px;
 
               <? $segment = Request::segment(1);?>
 
-               <li class="nav-header">UPC/PLU</li>
-
-          <li class="nav-item has-treeview  @if( $segment == 'approved') menu-open @endif  ">
-            <a href="#" class="nav-link @if( $segment == 'approved') active @endif ">
-
-              <i class="nav-icon fas fa-thumbs-up"></i>
-              <p>
-                Approved  <i class="fas fa-angle-left right"></i>
-<span class="badge badge-success right"> </span>
-
-              </p>
-            </a>
-
-            <ul class="nav nav-treeview">
+               <li class="nav-header">UPLOAD</li>
 
 
+                {{-- add upc --}}
 
- 
+                <li class="nav-item has-treeview">
+                  <a href="{{route('add_upc')}}" class="nav-link @if( $segment == 'add_upc') active @endif">
+                      <i class="nav-icon fas fa-upload"></i>
+                    <p>
+                     Single Upload
+
+                    </p>
+                  </a>
+
+                </li>
+
+                {{-- add upc --}}
+
+                <li class="nav-item has-treeview">
+                  <a href="{{route('dashboard')}}" class="nav-link @if( $segment == 'file_upload') active @endif">
+                      <i class="nav-icon fas fa-upload"></i>
+                    <p>
+                     File Upload
+
+                    </p>
+                  </a>
+
+                </li>
 
 
-
-
-              </ul>
-
-
-
-
-
-          </li>
-
-
-
-
-          <li class="nav-item has-treeview">
-          <a href="{{route('dashboard')}}" class="nav-link @if( $segment == 'pending') active @endif">
-              <i class="nav-icon fas fa-flag"></i>
-              <p>
-                Pending
-
-              <span class="badge badge-warning right"> </span>
-              </p>
-            </a>
-
-
-          </li>
+  
 
 
 
+          <li class="nav-header">TOOLS</li>
 
-
-
-
-
-
-          <li class="nav-item has-treeview">
-            <a href="{{route('dashboard')}}" class="nav-link @if( $segment == 'denied') active @endif">
-                <i class="nav-icon fas fa-thumbs-down"></i>
-              <p>
-                Denied
-              <span class="badge badge-danger right"> </span>
-              </p>
-            </a>
-
-          </li>
-
-
-
-          <li class="nav-header">Tools</li>
-
-{{-- add upc --}}
-
-          <li class="nav-item has-treeview">
-            <a href="{{route('dashboard')}}" class="nav-link @if( $segment == 'add_upc') active @endif">
-                <i class="nav-icon fas fa-upload"></i>
-              <p>
-                Add UPC
-
-              </p>
-            </a>
-
-          </li>
-
- 
- 
-
-<li class="nav-item has-treeview">
-  <a href="{{route('dashboard')}}" class="nav-link @if( $segment == 'data_for_p') active @endif">
- 
-      
-      
-    <p>
-      DATA for WOW/SOAR
-      <span class="badge badge-danger right"> </span>
-    </p>
-  </a>
-
-</li>
-
-
-
+  
           
-{{--  search --}}
+{{--  APL Checker(single) --}}
 
 <li class="nav-item has-treeview">
   <a href="{{route('dashboard')}}" class="nav-link @if( $segment == 'search') active @endif">
       <i class="nav-icon fas fa-search"></i>
     <p>
-      Search(UPC)
+      APL Checker(single)
+
+    </p>
+  </a>
+
+</li>
+
+{{--   APL Checker(multiple) --}}
+
+<li class="nav-item has-treeview">
+  <a href="{{route('dashboard')}}" class="nav-link @if( $segment == 'search') active @endif">
+      <i class="nav-icon fas fa-search"></i>
+    <p>
+      APL Checker(multiple)
 
     </p>
   </a>
@@ -280,13 +230,15 @@ font-size: 13px;
 </li>
 
 
-{{--  search actegory --}}
+
+
+{{--  Category Search --}}
 
 <li class="nav-item has-treeview">
   <a href="{{route('dashboard')}}" class="nav-link @if( $segment == 'category') active @endif">
       <i class="nav-icon fas fa-search"></i>
     <p>
-      Search(Category)
+       Category Search
 
     </p>
   </a>
@@ -296,13 +248,13 @@ font-size: 13px;
 
 
 
-{{-- check digit --}}
+{{-- Find Check Digit --}}
 
           <li class="nav-item has-treeview">
             <a href="{{route('dashboard')}}" class="nav-link @if( $segment == 'check_digit') active @endif">
-                <i class="nav-icon fas fa-check"></i>
+                <i class="nav-icon fas fa-barcode"></i>
               <p>
-                Check Digit
+                Find Check Digit
 
               </p>
             </a>
@@ -310,13 +262,26 @@ font-size: 13px;
           </li>
 
  
-{{-- Recent edit --}}
+{{-- My Uploads --}}
 
           <li class="nav-item has-treeview">
             <a href="{{route('dashboard')}}" class="nav-link @if( $segment == 'recent_edit') active @endif">
-                <i class="nav-icon fas fa-edit"></i>
+                <i class="nav-icon fas fa-briefcase"></i>
               <p>
-                Recent Edits
+                My Uploads
+
+              </p>
+            </a>
+
+          </li>
+
+{{-- How to Videos --}}
+
+          <li class="nav-item has-treeview">
+            <a href="{{route('dashboard')}}" class="nav-link @if( $segment == 'recent_edit') active @endif">
+                <i class="nav-icon fas fa-play"></i>
+              <p>
+                How to Videos
 
               </p>
             </a>
@@ -324,6 +289,47 @@ font-size: 13px;
           </li>
 
 
+{{-- Manual --}}
+
+          <li class="nav-item has-treeview">
+            <a href="{{route('dashboard')}}" class="nav-link @if( $segment == 'recent_edit') active @endif">
+                <i class="nav-icon fas fa-book"></i>
+              <p>
+                Manual
+
+              </p>
+            </a>
+
+          </li>
+
+
+{{-- Notice --}}
+
+          <li class="nav-item has-treeview">
+            <a href="{{route('dashboard')}}" class="nav-link @if( $segment == 'recent_edit') active @endif">
+                <i class="nav-icon fas fa-bullhorn"></i>
+              <p>
+                Notice
+
+              </p>
+            </a>
+
+          </li>
+
+{{-- Solutran FTP --}}
+
+          <li class="nav-item has-treeview">
+            <a href="{{route('dashboard')}}" class="nav-link @if( $segment == 'recent_edit') active @endif">
+                <i class="nav-icon fas fa-link"></i>
+              <p>
+                Solutran FTP
+
+              </p>
+            </a>
+
+          </li>
+
+          
 
 
 
