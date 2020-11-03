@@ -23,7 +23,7 @@ Route::get('/test', function () {
 }); 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('test');
+    return view('add_upc');
 })->name('dashboard');
 
 Route::get('/add_upc', 'UpcController@add_upc')->name('add_upc');
@@ -44,3 +44,21 @@ Route::get('/check_digit/plu', 'CheckdigitController@plu')->name('check_digit.pl
 Route::get('/category', 'CategoryController@index')->name('category');
 Route::get('/category/general', 'CategoryController@general')->name('category.general');
 
+Route::get('/mywork', 'UploadController@index')->name('mywork');
+Route::get('/mywork_del/{id}', 'UploadController@delete')->name('mywork_delete');
+
+Route::get('/apl_check_m', 'UploadController@apl_check_m')->name('apl_check_m');
+Route::get('/apl_check_m/output', 'UploadController@apl_check_m_output')->name('apl_check_m_output');
+
+Route::get('/inactive', function () {
+    return view('inactive');
+})->name('inactive'); 
+
+Route::get('/notice', function () {
+    return view('notice');
+})->name('notice'); 
+
+
+Route::get('/t', function () {
+    return view('t1');
+}); 

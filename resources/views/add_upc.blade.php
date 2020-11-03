@@ -54,8 +54,8 @@
                 <input type=hidden name=upc value=""  id='hidden_upc'></input>
                 <input name = "time"    type=hidden value=" {{Carbon::now()->format('Y-m-d')}}"   ></input>
                 <input name = "staff"   type=hidden value="{{Auth::user()->name}} "   ></input>
- 
-
+                <input name = "corp"   type=hidden value="{{Auth::user()->name}} "   ></input>
+                <input name = "user_id"   type=hidden value="{{Auth::user()->id}} "   ></input>               
             <tr  >
             <td  width=15%>CATEGORY:</td>
             <td width=35%><select   class="form-control form-input rounded-md shadow-sm mt-1 block w-full disabled"   id="category1" name=category  disabled  >
@@ -310,9 +310,9 @@
 	
         <?
 
-$staff = Auth::user()->name;  
+$user_id = Auth::user()->id;  
  
-$upcs = App\Models\Upc::where('add_staff',$staff )-> orderby('timestamp','desc')->paginate(10)    ;
+$upcs = App\Models\Upindi::where('user_id',$user_id )-> orderby('timestamp','desc')->paginate(10)    ;
 
  ?>
 

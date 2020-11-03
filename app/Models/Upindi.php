@@ -4,13 +4,28 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+ 
+
 
 class Upindi extends Model
 {
     use HasFactory;
-
+ 
 
     protected $table = 'apl_up_indi';
+
+
+
+ 
+
+
+
+
+
+
+
+
+
     protected $fillable = [
     
         'upc'  , 
@@ -18,16 +33,12 @@ class Upindi extends Model
        'description' ,
         'size' ,
         'uom' ,  
-        'cate' ,
-         'sub' ,     
+        'category' ,
+         'subcategory' ,     
         'add_date'  ,
         'corp'  ,
 
-
-
-
-
-
+ 
              
         
         'add_name',

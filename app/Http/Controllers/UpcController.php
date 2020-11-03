@@ -444,8 +444,10 @@ $pic2 = $request->pic2->getClientOriginalName();
         $description = $request->input('description');        
         $size = $request->input('size');
         $uom = $request->input('uom');
-   
+        $corp = $request->input('corp');   
+        $user_id = $request->input('user_id'); 
 
+//dd($user_id);
 
   
         Upindi::create([
@@ -457,15 +459,14 @@ $pic2 = $request->pic2->getClientOriginalName();
               'description'=>    $description,
                'size'=>   $size,
                'uom'=>   $uom,               
-                
-               'verify' => 1,
+               'corp'=>   $corp,                   
+               'user_id'=>   $user_id,                   
                'add_date'=>$time,
-               'edit_date'=>$time,
-               'verify_date'=>$time,
+ 
                
-               'add_staff'=>$staff,
-               'edit_staff'=>$staff,
-               'verify_staff'=>$staff,
+               'add_name'=>$staff,
+ 
+ 
                'pic'=>  $pic,       
                'pic1'=> $pic1,
                'pic2'=> $pic2,

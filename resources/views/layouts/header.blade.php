@@ -184,7 +184,7 @@ font-size: 13px;
                 {{-- add upc --}}
 
                 <li class="nav-item has-treeview">
-                  <a href="{{route('dashboard')}}" class="nav-link @if( $segment == 'file_upload') active @endif">
+                  <a href="{{route('inactive')}}" class="nav-link @if( $segment == 'file_upload') active @endif">
                       <i class="nav-icon fas fa-upload"></i>
                     <p>
                      File Upload
@@ -206,7 +206,7 @@ font-size: 13px;
 {{--  APL Checker(single) --}}
 
 <li class="nav-item has-treeview">
-  <a href="{{route('dashboard')}}" class="nav-link @if( $segment == 'search') active @endif">
+  <a href="https://apl.mdwic.org/upc_web" class="nav-link"  target="_Blank" >
       <i class="nav-icon fas fa-search"></i>
     <p>
       APL Checker(single)
@@ -219,7 +219,7 @@ font-size: 13px;
 {{--   APL Checker(multiple) --}}
 
 <li class="nav-item has-treeview">
-  <a href="{{route('dashboard')}}" class="nav-link @if( $segment == 'search') active @endif">
+  <a href="{{route('apl_check_m')}}" class="nav-link @if( $segment == 'apl_check_m') active @endif">
       <i class="nav-icon fas fa-search"></i>
     <p>
       APL Checker(multiple)
@@ -235,7 +235,7 @@ font-size: 13px;
 {{--  Category Search --}}
 
 <li class="nav-item has-treeview">
-  <a href="{{route('dashboard')}}" class="nav-link @if( $segment == 'category') active @endif">
+  <a href="{{route('category')}}" class="nav-link @if( $segment == 'category') active @endif">
       <i class="nav-icon fas fa-search"></i>
     <p>
        Category Search
@@ -251,7 +251,7 @@ font-size: 13px;
 {{-- Find Check Digit --}}
 
           <li class="nav-item has-treeview">
-            <a href="{{route('dashboard')}}" class="nav-link @if( $segment == 'check_digit') active @endif">
+            <a href="{{route('check_digit')}}" class="nav-link @if( $segment == 'check_digit') active @endif">
                 <i class="nav-icon fas fa-barcode"></i>
               <p>
                 Find Check Digit
@@ -265,7 +265,7 @@ font-size: 13px;
 {{-- My Uploads --}}
 
           <li class="nav-item has-treeview">
-            <a href="{{route('dashboard')}}" class="nav-link @if( $segment == 'recent_edit') active @endif">
+            <a href="{{route('mywork')}}" class="nav-link @if( $segment == 'recent_edit') active @endif">
                 <i class="nav-icon fas fa-briefcase"></i>
               <p>
                 My Uploads
@@ -278,7 +278,7 @@ font-size: 13px;
 {{-- How to Videos --}}
 
           <li class="nav-item has-treeview">
-            <a href="{{route('dashboard')}}" class="nav-link @if( $segment == 'recent_edit') active @endif">
+            <a href="https://apl.mdwic.org/tutorial" class="nav-link" target="_blank">
                 <i class="nav-icon fas fa-play"></i>
               <p>
                 How to Videos
@@ -292,7 +292,7 @@ font-size: 13px;
 {{-- Manual --}}
 
           <li class="nav-item has-treeview">
-            <a href="{{route('dashboard')}}" class="nav-link @if( $segment == 'recent_edit') active @endif">
+            <a href="{{asset('storage/upc_upload_manual.pdf')}}" class="nav-link" target="_blank">
                 <i class="nav-icon fas fa-book"></i>
               <p>
                 Manual
@@ -306,7 +306,7 @@ font-size: 13px;
 {{-- Notice --}}
 
           <li class="nav-item has-treeview">
-            <a href="{{route('dashboard')}}" class="nav-link @if( $segment == 'recent_edit') active @endif">
+            <a href="{{route('notice')}}" class="nav-link @if( $segment == 'notice') active @endif">
                 <i class="nav-icon fas fa-bullhorn"></i>
               <p>
                 Notice
@@ -319,7 +319,7 @@ font-size: 13px;
 {{-- Solutran FTP --}}
 
           <li class="nav-item has-treeview">
-            <a href="{{route('dashboard')}}" class="nav-link @if( $segment == 'recent_edit') active @endif">
+            <a href="https://vendor.solutran.com/EFTClient/Account/Login.htm " class="nav-link" target="_blank" >
                 <i class="nav-icon fas fa-link"></i>
               <p>
                 Solutran FTP

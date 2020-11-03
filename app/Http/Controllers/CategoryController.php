@@ -38,8 +38,15 @@ class CategoryController extends Controller
 
          $output = '';
          $query = $request->get('query');
+
+      
       if($query !== ''){
 $data = Category::search($query)->orderby('cate')->get();  
+ 
+
+
+
+//$data = Category::all();
 
       }else{
 
